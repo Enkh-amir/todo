@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+ 
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="add_container">
+      <button id="add_task">Add task</button>
+      <div id="modal" class="modal">
+        <div class="modal-inner">
+          <div class="gap10">
+            <div class="width100">
+              <button id="closeModal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="rgba(255,255,255,1)"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="enter-task">Enter Task</div>
+            <input type="text" placeholder="Task name..." class="task-name" id="input-box"/>
+            <select name="status" id="select1">
+              <option value="select status">select</option>
+              <option value="to Do">to Do</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done</option>
+              <option value="Block">Block</option>
+            </select>
+          </div>
+          <button type="submit" id="sub_button">Submit</button>
+        </div>
+      </div>
+    </div>
+ 
+    <div id="container">
+      <div class="card" id="to_do">
+        <div class="card-header" id="to-do-header">
+          <div class="circle gray"></div>
+          <div class="to-do-header-text">To do</div>
+          <div class="task-count" id="to-do-task-count"></div>
+        </div>
+
+        <!-- <div class="task">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="rgba(255,255,255,1)"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"
+            ></path>
+          </svg>
+          <div class="task-data">[loan-management] - Add card component</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="rgba(255,255,255,1)"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              d="M15.7279 9.57627L14.3137 8.16206L5 17.4758V18.89H6.41421L15.7279 9.57627ZM17.1421 8.16206L18.5563 6.74785L17.1421 5.33363L15.7279 6.74785L17.1421 8.16206ZM7.24264 20.89H3V16.6473L16.435 3.21231C16.8256 2.82179 17.4587 2.82179 17.8492 3.21231L20.6777 6.04074C21.0682 6.43126 21.0682 7.06443 20.6777 7.45495L7.24264 20.89Z"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="rgba(234,46,46,1)"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+            ></path>
+          </svg>
+        </div> -->
+      </div>
+      <div class="card" id="in_progress">
+        <div class="card-header" id="in-progress-header">
+          <div class="circle yellow"></div>
+          <div class="to-do-header-text">In progress</div>
+          <div class="task-count" id="to-do-task-count"></div>
+        </div>
+      </div>
+      <div class="card" id="done">
+        <div class="card-header" id="done-header">
+          <div class="circle green"></div>
+          <div class="to-do-header-text">Done</div>
+          <div class="task-count" id="to-do-task-count"></div>
+        </div>
+      </div>
+      <div class="card" id="blocked">
+        <div class="card-header" id="block-header">
+          <div class="circle red"></div>
+          <div class="to-do-header-text">block</div>
+          <div class="task-count" id="to-do-task-count"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <script src="index.js"></script>
+  </body>
+</html>

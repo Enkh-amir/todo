@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --task-text-color: #d9d9d9;
+  --body-font: "Inter", sans-serif;
+  --small-font-size: 12px;
+  --medium-font-size: 18px;
+  --small-icon-size: 16px;
+  --card-color: #101010;
+  --task-color: #1a1a1a;
+}
+
+.gray {
+  background: #d9d9d9;
+}
+.yellow {
+  background-color: #a3a300;
+}
+.green {
+  background-color: #00a300;
+}
+.red {
+  background: #a30000;
+}
+.circle {
+  width: 15px;
+  height: 13px;
+  border-radius: 50%;
+}
+.gap10 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  position: relative;
+  padding-bottom: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#add_container {
+  width: 1180px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+#add_task {
+  width: 109px;
+  height: 44px;
+  padding: 0px 20px 0px 20px;
+  margin-top: 50px;
+  gap: 10px;
+  border-radius: 4px;
+  border: none;
+  background: #00a300;
+  color: white;
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+#container {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  width: 280px;
+  height: 672px;
+  background: var(--card-color);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-header {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.to-do-header-text {
+  font-size: var(--medium-font-size);
+  font-weight: 700;
+  color: white;
+  font-family: var(--body-font);
+  width: 100%;
+  line-height: 14.52px;
+}
+.task-count {
+  color: #999999;
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  font-family: var(--body-font);
+}
+.task {
+  width: 240px;
+  height: 54px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  cursor: grab;
+}
+.task-data {
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  color: #d9d9d9;
+  width: 148px;
+}
+.ri-pencil-line {
+  width: 12px;
+  height: 12px;
+}
+.modal {
+  background: #1a1a1ab2;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-inner {
+  width: 370px;
+  height: 376px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px 40px 40px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.modal.open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.enter-task {
+  color: white;
+  font-size: 24px;
+  font-family: var(--body-font);
+  font-weight: 700;
+}
+#select1 {
+  background: none;
+  border: 1px solid #999999;
+  color: white;
+  width: 290px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 10px;
+}
+.task-name {
+  padding: 12px;
+  /* border: none; */
+  border: 1px solid #999999;
+  width: 100%;
+  background: none;
+  border-radius: 4px;
+  border: 1px solid #999999;
+  color: white;
+}
+#closeModal {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: none;
+}
+.width100 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#sub_button {
+  width: 290px;
+  height: 44px;
+  border: none;
+  background: #00a300;
+  color: white;
+  border-radius: 4px;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+.ri-delete-bin-line {
+  cursor: pointer;
+  color: red;
+}
+.ri-pencil-line {
+  cursor: pointer;
+  color: white;
+}
+.ri-draggable {
+  cursor: grab;
+  color: white;
+}
+#editing_input {
+  width: 148px;
+  height: 15px;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 300;
+}
